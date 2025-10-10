@@ -1,0 +1,12 @@
+# Dependências principais
+pandas
+pytest
+
+# Banco de dados (sqlite já vem com o Python)
+# mas você pode usar sqlite-utils ou SQLAlchemy se quiser no futuro
+
+# Interface gráfica (se quiser GUI)
+# tkinter == built-in (já vem com o Python)
+
+# Outras ferramentas recomendadas
+black       # para formatar o código
