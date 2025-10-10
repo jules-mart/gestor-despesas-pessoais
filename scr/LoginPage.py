@@ -1,12 +1,8 @@
 import customtkinter as ctk
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 class LoginPage(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
-
-        # Layout centralizado
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure((0, 1, 2, 3, 4), weight=1)
 
@@ -30,9 +26,7 @@ class LoginPage(ctk.CTkFrame):
         usuario = self.entry_usuario.get().strip()
         senha = self.entry_senha.get().strip()
 
-        # Credenciais fixas (pode ser substituído depois por banco de dados)
         if usuario == "admin" and senha == "1234":
             self.master.abrir_sistema()
         else:
             self.label_erro.configure(text="Usuário ou senha incorretos.")
-            
