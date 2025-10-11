@@ -1,6 +1,7 @@
 # TelaPrincipal.py (Versão Atualizada com a aba "Meu Perfil")
 
 import customtkinter as ctk
+from resumo import AbaResumo
 
 class TelaPrincipal(ctk.CTk):
     def __init__(self):
@@ -32,11 +33,9 @@ class TelaPrincipal(ctk.CTk):
 
     def criar_conteudo_abas(self):
         # Aba de Resumo
-        frame_resumo = self.tab_view.tab("Resumo")
-        label_resumo = ctk.CTkLabel(
-            frame_resumo, text="Aqui ficará o resumo financeiro.", font=ctk.CTkFont(size=20)
-        )
-        label_resumo.pack(padx=20, pady=20, expand=True)
+        # Cria uma instância da nossa classe importada e a coloca na aba "Resumo"
+        aba_resumo = AbaResumo(master=self.tab_view.tab("Resumo"))
+        aba_resumo.pack(fill="both", expand=True)
 
         # Aba de Despesas
         frame_despesas = self.tab_view.tab("Despesas")
@@ -105,3 +104,4 @@ class TelaPrincipal(ctk.CTk):
             hover_color="#2563eb"
         )
         btn_salvar.pack(pady=25, fill="x")
+
