@@ -1,7 +1,7 @@
 # TelaPrincipal.py (Versão Atualizada com a aba "Meu Perfil")
 
 import customtkinter as ctk
-from resumo import AbaResumo
+from Resumo import AbaResumo
 
 class TelaPrincipal(ctk.CTk):
     def __init__(self):
@@ -104,4 +104,5 @@ class TelaPrincipal(ctk.CTk):
             hover_color="#2563eb"
         )
         btn_salvar.pack(pady=25, fill="x")
+
 
